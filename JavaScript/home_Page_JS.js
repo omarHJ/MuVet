@@ -219,3 +219,36 @@ var currentYear = new Date().getFullYear();
 
 // Display it in the HTML
 document.getElementById('currentYear').textContent = currentYear;
+
+
+function toggleMenu() {
+
+            var menu = document.getElementById("regular-display");
+            if (menu.style.transform === "translateX(100%)" || menu.style.transform === "") {
+                menu.style.transform = "translateX(0%)"; // Slide in
+                menu.style.display = "block"; // Ensure the menu is displayed when sliding in
+            } else {
+                menu.style.transform = "translateX(100%)"; // Slide out
+            }
+        }
+
+        // Ensure that the menu returns to normal when the window is resized larger than 700px
+        window.addEventListener('resize', function () {
+            var menu = document.getElementById("regular-display");
+            if (window.innerWidth > 700) {
+                menu.style.removeProperty('transform');
+                menu.style.removeProperty('display');
+            } else if (menu.style.transform === "translateX(0%)") {
+                // If the menu is open and the window is resized to be smaller than 700px, close the menu
+                toggleMenu();
+            }
+        });
+
+        // Initial setup for the menu to be hidden on page load at smaller screen sizes
+        document.addEventListener('DOMContentLoaded', function () {
+            var menu = document.getElementById("regular-display");
+            if (window.innerWidth <= 700) {
+                menu.style.transform = "translateX(100%)";
+            }
+        });
+        
