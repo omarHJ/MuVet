@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const moonEmoji = document.getElementById('moon');
     const sunEmoji = document.getElementById('sun');
     const divs = document.getElementsByClassName('dark');
-    const con_edge = document.querySelectorAll('article'); // Selecting divs with class edge-container
+    const con_edge = document.querySelectorAll('header'); // Selecting divs with class edge-container
     const sections = document.querySelectorAll('section'); // Selecting all sections
     const NavBar = document.querySelectorAll('nav');
     const topDiv = document.getElementById('top_div');
