@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/Doctors Signup.css">
+</head>
+<body>
+    <div id="top">
+        <a><img style="height: 85%; width: 23%;"
+            src="imgs/mu-vet-high-resolution-logo-transparent.png"></a>
+    </div>
+    <div class="container">
+        <div style="width: 48%;">
+        <p class="paragraph">
+           <h1>
+                <span id="texSign4"> Become a valued member of the MuVet team! </span>
+                <span id="texSign5" class="color-changing"> Let's make a positive impact on the lives of our beloved pets.</span> 
+                <span id="texSign6"> Sign up today and be part of the MuVet community.</span>
+           </h1>
+        </p>
+        </div>
+        <br><br><br><br>
+        <p class="paragraph">
+            <div style='display: flex; flex-direction: column; align-items: center;'>
+                <p>
+                    <a> <img id="pic2" style='margin-bottom: -40px;' src='imgs/tmp_1a908d18-52e2-40eb-a4c5-aa00d3861613.png'></a>  
+                </p>
+                <p>
+                    <form method="post" action="Back-End/Process_SignUp.php" autocomplete="off">
+                        <h3 style="text-align: left; margin-left: 13%;" id="signup"> Sign Up</h3>
+                        <label for="username"> </label>
+                        <input type="text" placeholder="Full Name" id="username" name="username" required><br><br>
+
+                        <label for="Emp_ID"> </label>
+                        <input type="number" placeholder="Employee ID" id="Emp_ID" name="Emp_ID" required><br><br>
+                    
+                        <label for="email"> </label>
+                        <input type="email" placeholder="Email" id="email" name="email" required><br><br>
+
+                        <label for="Phone"> </label>
+                        <input type="tel" placeholder="Phone Number" id="Phone" name="Phone" required><br><br>
+                    
+                        <label for="password"> </label>
+                        <input type="password" placeholder="Password" id="password" name="password" required><br><br>
+                    
+                        <label for="confirm_password"> </label>
+                        <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" required><br><br>
+                    
+                        <button style="background-color: black; color: white; margin-right: 20%;" onclick="window.location.href ='index.html'">Back</button>
+                        <button style="background-color: rgb(61, 135, 196); color: white;" type="submit" name="sign_up" >Sign Up</button>
+                    </form>
+                <p>
+            </div>
+        </p>
+    </div>
+
+    <script src="JavaScript/language.js"></script>
+    <script src="JavaScript/Signup functionalities.js"></script>
+
+</body>
+</html>

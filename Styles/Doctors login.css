@@ -1,0 +1,118 @@
+        body {
+            background-color: #7FF9FF;
+            color: black;
+            font-family: 'Arial black', sans-serif;
+        }
+
+        /* For WebKit browsers (Chrome, Safari) */
+        /* Customize the scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* width of the scrollbar */
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* color of the track */
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #1f8db1;
+            /* color of the handle */
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            /* color of the handle on hover */
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            /* Optional: Remove margin */
+        }
+
+        .container {
+            align-items: center;
+            display: flex;
+            height: auto;
+            margin: 5%;
+        }
+
+        .paragraph {
+            text-align: center;
+        }
+
+        button {
+            border: none;
+            border-radius: 20px;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        form {
+            background-color: #87CEEB;
+            border: 2px solid whitesmoke;
+            border-radius: 25px;
+            box-sizing: border-box;
+            text-align: center;
+            width: 30vw;
+            padding-bottom: 2%;
+        }
+
+        input {
+            background-color: #FFFFFF;
+            width: 85%;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid darkgray;
+            padding-left: 20px;
+            outline-color: rgba(88, 0, 255, 1);
+        }
+
+        @media (min-width: 700px) {
+            .container {
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /*#user {
+                margin-left: -2%;
+            }*/
+            #img1 {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            form {
+                width: 100%;
+            }
+
+            .container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            #user {
+                margin-left: 0%;
+            }
+
+            #img1 {
+                width: 0px;
+            }
+
+            #user {
+                width: 20vw;
+            }
+        }

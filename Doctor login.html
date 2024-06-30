@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/Doctors login.css">
+
+    
+</head>
+<body>
+    
+    <div style="text-align: center;">
+        <a><img style="height: auto; width: 23%;"
+            src="imgs/mu-vet-high-resolution-logo-transparent.png"></a>
+    </div>
+    <div class="container">
+        <div style="width: 48%;">
+        <p  class="paragraph">
+           <a><img id="img1"src="imgs/tmp_fccb2c52-27bf-482d-a3a7-71d0a00c6f7b.png"></a>
+        </p>
+        </div>
+        <br><br><br><br>
+        <div class="paragraph">
+            <div style='display: flex; flex-direction: column; align-items: center;'>
+                <p>
+                    <a><img id="user" style="height: 95%; width: 18%; margin-bottom: -40px;"
+                    src="imgs/user_interface.png"></a> 
+                </p>
+                <p>
+                    <form id="signupForm" method="post" action="Back-End/Process_Login.php">
+                        <h3 style="text-align: left; margin-left: 13%;" id="login3"> Log In </h3>
+                    
+                        <label for="email"> </label>
+                        <input type="email" placeholder="Email" id="email" name="email" required onkeypress="handleKeyPress(event)"><br><br>
+                        
+                        <label for="Emp_ID"> </label>
+                        <input type="number" placeholder="Employee ID" id="Emp_ID" name="Emp_ID" required ><br><br>
+
+                        <label for="password"> </label>
+                        <input type="password" placeholder="Password" id="password" name="password" required onkeypress="handleKeyPress(event)" ><br><br>       
+                        
+                        <p style="text-align: left; padding:0; margin-left: 7%; margin-top:-5%; margin-bottom:-3%"><a href="Back-end/forgot-password.php" style="text-decoration:none; font-size: small;">Forgot Password?</a>
+                        <button style="margin-left:40%; padding: 3px 6px;" id="toggleBtn" type="button">Show</button></p> 
+                        <br />
+                        <button style="background-color: black; color: white; margin-right: 20%;" id="goback" onclick="window.location.href ='index.html'">Back</button>
+                        <button style="background-color: rgb(61, 135, 196); color: white;" type="submit" name="login" id="login"> Log In </button>
+                    </form>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="JavaScript/language.js"></script>
+
+    <script src="JavaScript/login-functionalities.js"></script>
+    </script>
+</body>
+
+</html>

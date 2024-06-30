@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="Styles/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img style="width:50%" src="imgs/up arrow.png"> </button>
+    <main style=" background-image: url('imgs/AdobeStock_506598485-copy1.jpg'); background-repeat: no-repeat;">
+    <article id="Top" class="edge-container"
+            style=" border-bottom-left-radius: 25px; border-bottom-right-radius: 25px; width: 100%;">
+            <p id="pic1" class="paragraph1" >
+                <a><img style="height: 85%; width: 35%; transform: translateX(30px) translateY(7px); "
+                        src="imgs/mu-vet-high-resolution-logo-transparent.png"></a>
+            </p>
+            <p id="regular-display" class="paragraph1" style=" margin-top: 35px; font-family: monospace; font-weight: bold; text-align: right;"> 
+                <span id="openModalBtn" style="margin-left: 2.5%; cursor:pointer"> Contact </span>
+                    <a id="serv" href="#services-list" style="text-decoration: none; margin-right: 2%; margin-left: 2.5%"> Services </a>  <!-- Language selector dropdown -->
+                <select style="background-color: transparent; color: blue; border: none; font-family: monospace;  font-weight: bold; font-size: large" id="language-select">
+                    <option style="background-color: transparent;" value="en">English</option>
+                    <option style="background-color: transparent;" value="ar">العربية</option>
+                </select>
+                <span class="emoji" id="moon">🌙</span> <span class="emoji" id="sun" style="margin-right: 8px">☀️</span>
+            </p>
+
+            <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p style="color: black">Clinic Land Line  1 :  06533518  <br> Clinic Land Line  2 :  06533520 </p>
+            </div>
+            </div>
+        </article> 
+    </main>
+    <script src='JavaScript/Dark-mode.js'></script>
+    <div id="atmuv" class="dark container" style=" background-image: url('imgs/AdobeStock_506598485-copy.jpg'); background-repeat: no-repeat; background-size: 100% auto;">
+    
+        <p class="paragraph"></p>
+        <p  style="margin-bottom: 20px; justify-content: flex-start; "><br> 
+        <div id="para5" style="background-color: rgba(141, 141, 141, 0.15); padding: 0 25px;">
+            <br>
+            <p id="whoAre" >
+                <span id="who" class="larger-letter"> Who </span> 
+                <span class="larger-letter" id="are" style="color: darkviolet;"> Are </span> 
+                <span id="we" class="larger-letter"> We ? </span> 
+            </p>
+            <br>
+            <p> 
+                <span id="atmu" >
+                    At MuVet we understand the specialbond you share with your pets,
+                    and <span style="color: darkviolet"> our mission is to provide top-notch veterinary services </span> tailored to meet their unique needs.
+                    </span>
+                    <br><br>
+                    <span id="wepride">
+                    Our team of highly skilled veterinarians pride themselves on their commitment to excellence in veterinary care and our dedication to nurturing the 
+                    strong bond between you and your furry companions. 
+                    </span>
+                        <br><br>
+                    
+            </p>
+            <br>
+        </div>
+        </p>
+    </div>
+    <div style="margin: 3%; padding: 1%;text-align: center;">
+        <h1 id="services-list">Our services</h>
+    </div>
+    <div class="container" style="margin: 3%; padding: 1%;">
+        <p class="paragraph3"> <span class="larger-letter" id="h1"> Health Check Appointments</span>
+            <br><span id="h11"> Our veterinarian will check your pet's weight, temperature, pulse, and respiration rate.
+            Vets will scan your pet for any obvious signs of illness and will likely ask you questions about your
+            pet's
+            normal behavior. </span>
+        </p>
+        <p class="paragraph3"><span class="larger-letter" id="h2">Travel Preparations</span>
+            <br> <span id="h22">  Planning to travel with you your pet? We've got you covered, our clinic will assist
+            you in prepairing any travelling papers for your pet, ensuring a smooth and hassle-free
+            journey for you and your companion.</span>
+        </p>
+        <p class="paragraph3"><span class="larger-letter" id="h3"> Surgery Appointments </span>
+            <br> <span id="h33"> Our skilled veterinary team is rquipped to handle a wide range of surgical procedures,
+            From routine surgeries to specialized interventions, we prioritize the health and well-being of your
+            pets.</span>
+        </p>
+        <p class="paragraph"
+            style="font-size:220%; font-family: monospace; margin-top: 5%; color: rgb(204, 103, 20); font-weight: bold;" id="h4">
+            And More !
+    </div>
+    <div class="container dark" style="background-color: rgb(175, 247, 255); padding: 20px;">
+        <p class="paragraph">
+            <br> <a><img class="rounded-corner" style="height: 85%; width: 100%;"
+                    src="https://i.ibb.co/nBcT8yv/photo-2024-02-01-20-16-29.jpg"></a>
+        </p>
+        <p class="paragraph">
+            <span class="larger-letter" id="clinet"><br> Log In As Pet-Owner </br></span><br> <span id="wellcom"> Welcome to MuVet, where</br>
+            <br>your pet's health is our focus</span><br><br>
+            <br> <button onclick="redirectToLoginPage('client-login')">
+                <div class="slide-effect">
+                    <div class="AA" id="login" > Log in </div>
+                </div>
+            </button>  <button onclick="redirectToLoginPage('signup-client')">
+                <div id="reg" > Sign up </div>
+            </button>
+            </br>
+        </p>
+    </div>
+    <div class="container" style="margin: 5%; padding: 1%;">
+        <p class="paragraph"><span class="larger-letter" id="doct"><br> Log in As Clinic Staff </span> <br><br><br><br>
+            <button id="login2" onclick="redirectToLoginPage('staff-login')">Log in </button> 
+            <button id="reg2" onclick="redirectToLoginPage('staff-reg')">Sign up</button>
+        </p>
+        <p class="paragraph"><a><img class="rounded-corner" style="height: 90%; width: 90%;"
+                    src="https://i.ibb.co/tMNZSjv/photo-2024-02-01-22-21-50.jpg" alt="photo-2024-02-01-22-21-50"></a>
+        </p>
+    </div>
+    <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255);">
+        <br>
+        <h1 id="hours">Working Hours</h1> <br>
+        <div class="inline-element">
+            <h2 id="d1">Sunday</h2> <span id="time0"> 8:30 A.M. - 3:00 P.M. </span>
+        </div>
+        <div class="inline-element">
+            <h2 id="d2">Monday</h2> <span id="time1"> 8:30 A.M. - 3:00 P.M. </span>
+        </div>
+        <div class="inline-element">
+            <h2 id="d3">Tuesday</h2> <span id="time2"> 8:00 A.M. - 3:00 P.M. </span>
+        </div>
+        <div class="inline-element">
+            <h2 id="d4">Wednesday</h2> <span id="time3"> 8:00 A.M. - 3:00 P.M. </span>
+        </div> 
+    </div>
+    <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255); padding: 20px;">
+        <div class="inline-element">
+            <h2 id="d5">Thursday</h2> <span id="time4"> 8:00 A.M. - 3:00 P.M. </span>
+        </div>
+        <div class="inline-element">
+            <h2 id="d6">Friday</h2> <span id="time5"> 4:00 P.M. - 10:00 P.M. </span>
+        </div>
+        <div class="inline-element">
+            <h2 id="d7">Saterday</h2> <span id="time6"> 9:00 A.M. - 2:00 P.M. </span>
+        </div>
+    </div>
+    <section class="gradient-background">
+        <br>
+        <dive class="dark" style="text-align: center;">
+            <span class="larger-letter">
+                <h1 id="team">Meet Our Team</h1>
+            </span>
+        </dive>
+        <br>
+        <div class="card-container">
+            <div class="card" style="min-width: 200px;">
+                <div>
+                    <h2 id="ali">Ali Omar </h2>
+                    <br><span id="ali2"> A veterinarian graduated from the Jordanian University of Science and Technology with 3 years of experience in puppy,
+                     cats and surgeries. </span>
+                </div>
+            </div>
+            <div class="card" style="min-width: 200px;">
+                <div>
+                    <h2 id="ola">Ola Ahmad</h2>
+                    <br><span id="ola2"> A veterinarian who graduated from the Jordanian University of Science and Technology with two years of experience working with horses,
+                     sheep and cattle. </span>
+                </div>
+            </div>
+            <div class="card" style="min-width: 200px;">
+                <div>
+                    <h2 id="ayhm">Ayham Hamza</h2>
+                    <br><span id="ayhm2"> Ouer beloved groomer </span>
+                </div>
+            </div>
+        </div>
+        <br> <br>
+    </section>
+    <main class="dark">
+        <article class="edge-container"
+            style="line-height: 35px; text-align: center; padding: 25px; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+            <br>
+            <p class="paragraph2" style="font-family: monospace; font-weight: bold; font-size: 1.5em;">
+            <span id="openModalBtn2" style=" cursor:pointer"> Phone number </span><br> <span id="email">  Email us </span> <br> <a href="https://www.google.com/maps/place/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D9%85%D8%A4%D8%AA%D8%A9%E2%80%AD/@31.0936565,35.7325286,14z/data=!4m6!3m5!1s0x15039d60edaaebdd:0x9a417ab22771f9b3!8m2!3d31.0936562!4d35.7173742!16s%2Fm%2F043l6yx?entry=ttu"><span id="location"> Location </span></a> <br> <a href="#atmuv"><span id="abt"> About </span></a> <br>
+                <br>
+                &copy;<span id="currentYear"></span></script>
+            </p>
+            <p id="regular-display-1" class="paragraph2"
+                style="font-family: monospace; font-weight: bold; font-size: 1.2em;">
+                <a href=""><img style="width: 70%; height: 50%;" src="imgs/white logo.png"></a> <br>
+                <span id="reg2"> Follow us on social media <br>
+                    <a><img id="reg2" style="width: 10%; height: 22%; margin-right: 10px;"
+                            src="imgs/tmp_405af464-7f31-480c-b7f1-d759f8d247bb.png"></a>
+                    <a><img style="width: 10%; height: 22%; margin-right: 10px;"
+                            src="imgs/tmp_3a41c722-46cc-4f6d-a686-6de992918710.png"></a>
+                    <a><img style="width: 10%; height: 22%;" src="imgs/tmp_1531e6e0-d13e-446e-82bc-183cf71b33f8.png"></a>
+                </span>
+            </p>
+            <br>
+        </article>
+    </main>
+    <script src="JavaScript/home_Page_JS.js"></script>
+</body>
+
+</html>

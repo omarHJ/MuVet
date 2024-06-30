@@ -1,0 +1,371 @@
+body {
+    font-family: 'Arial black', sans-serif;
+    background-color: rgb(183, 228, 233);
+    line-height: 1.7;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: -20px;
+    z-index: 99;
+    font-size: 18px;
+    padding: 0%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: skyblue;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+    color: dark gray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* For WebKit browsers (Chrome, Safari) */
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1f8db1;
+    /* color of the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* color of the handle on hover */
+}
+
+.gradient-background {
+    background-image: linear-gradient(rgb(175, 247, 255), rgb(175, 247, 255), white, white, rgb(175, 247, 255));
+}
+
+.dark-gradient {
+    background-image: linear-gradient(rgba(0, 81, 84, 0.687), rgb(0, 73, 80), gray, gray, rgb(34, 80, 85));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    background-color: rgb(175, 247, 255);
+}
+
+.full-width-div {
+    background-color: lightblue;
+    height: 100vh;
+    /* 100% of the viewport height */
+}
+
+.rounded-corner {
+    border-radius: 15px;
+}
+
+.larger-letter {
+    font-size: 1.7em;
+    /* Adjust the font size as needed */
+}
+
+button {
+    background-color: rgb(212, 212, 212);
+    font-family: 'Arial black', sans-serif;
+    border-radius: 15px;
+    padding: 3.5%;
+    width: 100px;
+    border: solid purple;
+    /*transition: background-color 0.3s ease-in-out;*/
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    margin-right: 5%;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    overflow: hidden;
+
+}
+
+.edge-container {
+    background-color: rgb(17, 238, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    overflow: hidden;
+    color: blue;
+}
+
+.Dark-edge-container {
+    background-color: rgb(112, 171, 174);
+    color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    overflow: hidden;
+}
+
+.paragraph {
+    width: 45%;
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.paragraph1 {
+    width: 50%;
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+}
+
+.paragraph2 {
+    width: 48%;
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.paragraph3 {
+    width: 45%;
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+img {
+    vertical-align: middle;
+    /* or top */
+}
+
+.inline-element {
+    display: inline-block;
+    /* or use display: inline; */
+    justify-content: center;
+    gap: 25px;
+    margin: 30px;
+    /* Adjust as needed for spacing */
+    background-color: rgba(13, 162, 212, 0.8);
+    color: #21118e;
+    border-radius: 15px;
+    padding: 25px;
+    box-sizing: border-box;
+    /* Include padding and border in the total width and height */
+    border: 1px solid black;
+}
+
+.card-container {
+    display: flex;
+    /* or use display: inline; */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    flex-flow: row wrap;
+}
+
+.card {
+    font-family: sans-serif;
+    margin: 15px;
+    /* Adjust as needed for spacing */
+    text-align: center;
+    background-color: rgba(3, 3, 143, 1);
+    color: #94dffe;
+    border-radius: 15px;
+    padding: 25px;
+    box-sizing: border-box;
+    /* Include padding and border in the total width and height */
+    width: 28%;
+    box-shadow: 0px 2px 9px #000609;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: transform 0.7s ease;
+}
+
+.card:hover {
+    background-color: rgb(103, 194, 255);
+    color: rgb(0, 0, 0);
+    transform: scale(120%);
+    transition-property: color, background-color, transform;
+    transition-duration: 1s;
+
+}
+
+.card-1 {
+    margin-top: 35px;
+    background-color: rgb(17, 238, 255);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: rgb(18, 47, 63);
+    /* Dark background color */
+    color: #ffffffbb;
+    /* Light text color */
+}
+
+.emoji {
+    cursor: pointer;
+    font-size: 20px;
+    /* Adjust the font size as needed */
+}
+
+@media (min-width:700px) {
+    #para5 {
+        width: 35%;
+    }
+
+    #whoAre {
+        text-align: left;
+        margin-right: 8px;
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+    #whoAre {
+        text-align: right;
+        margin-right: 10px;
+    }
+    #para5 {
+        width: 100%;
+        margin-top: 17%;
+    }
+
+    .paragraph {
+        width: 100%;
+        /* On smaller screens, make paragraphs stack on top of each other */
+
+    }
+
+    .paragraph3 {
+        width: 100%;
+    }
+
+    .paragraph2 {
+        width: 100%;
+        /* On smaller screens, make paragraphs stack on top of each other */
+        font-size: 0.5em;
+        text-align: center;
+        min-width: 200px;
+    }
+
+    body {
+        font-size: 13px;
+    }
+
+    .inline-element {
+        padding: 5%;
+        margin: 4%;
+    }
+
+    #Top {
+        .paragraph1 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    #pic1 {
+        transform: translateX(-25px);
+    }
+
+    #regular-display {
+        font-size: 14px;
+        margin-right: 6%;
+    }
+}
+
+@media (min-width: 1050px) {
+    #regular-display-1 {
+        margin-right: -195px;
+
+        #reg2 {
+            margin-left: 130px;
+        }
+    }
+
+    #regular-display {
+        font-size: 120%;
+    }
+}
