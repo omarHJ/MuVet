@@ -196,6 +196,7 @@ window.onload = function () {
     // When the user clicks the button, open the modal
     btn.onclick = function () {
         modal.style.display = "block";
+        toggleMenu();
     }
     // When the user clicks the button, open the modal
     btn2.onclick = function () {
