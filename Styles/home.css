@@ -299,6 +299,12 @@ img {
         text-align: left;
         margin-right: 8px;
     }
+    #openModalBtn {
+        margin-left: 2.5%;
+    }
+    #serve {
+        margin-right: 2%; margin-left: 2.5%
+    }
 }
 
 /* Default styles for the menu and hamburger icon */
@@ -330,10 +336,10 @@ img {
         display:  flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        padding-top: 20px;
+        place-content: center;
         position: fixed;
         right: -10;
-        top: 20px;
+        top: -35px;
         height: 100%;
         background-color: lightblue; /* Background color of the menu */
         z-index: 999;
@@ -402,6 +408,17 @@ img {
         font-size: 14px;
         margin-right: 6%;
     }
+
+    #openModalBtn {
+        margin: 0 0 50px 0;
+    }
+    #serv {
+        margin: 0 0 0 0;
+    }
+    select {
+        margin: 50px 0 50px 0;
+        transform: translateX(5%);
+    }
 }
 
 @media (min-width: 1050px) {
@@ -416,4 +433,16 @@ img {
     #regular-display {
         font-size: 120%;
     }
+}
+.hiddin {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
