@@ -25,7 +25,7 @@
             <p id="regular-display" class="paragraph1"
                 style=" margin-top: 35px; font-family: monospace; font-weight: bold; text-align: right;">
                 <span id="openModalBtn" style="cursor:pointer"> Contact </span>
-                <a id="serv" href="#services-list" style="text-decoration: none;">
+                <a id="serv" href="#services-list" onclick="toggleMenu()" style="text-decoration: none;">
                     Services </a>
                 <select
                     style="background-color: transparent; color: blue; border: none; font-family: monospace;  font-weight: bold; font-size: large"
@@ -33,7 +33,7 @@
                     <option style="background-color: transparent;" value="en">English</option>
                     <option style="background-color: transparent;" value="ar">العربية</option>
                 </select>
-                <span> <span class="emoji" id="moon">🌙</span> <span class="emoji" id="sun" >☀️</span></span>
+                <span> <span class="emoji" id="moon" onclick="toggleMenu()">🌙</span> <span onclick="toggleMenu()" class="emoji" id="sun" >☀️</span></span>
             </p>
 
             <div id="myModal" class="modal">
@@ -54,7 +54,7 @@
             <br><br><br>
             <p id="whoAre" class="hiddin">
                 <span id="who" class="larger-letter"> Who </span>
-                <span class="larger-letter" id="are" style="color: skyblue;"> Are </span>
+                <span class="larger-letter" id="are" style="color: darkviolet;"> Are </span>
                 <span id="we" class="larger-letter"> We ? </span>
             </p>
             <br>
