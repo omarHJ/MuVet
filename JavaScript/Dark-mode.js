@@ -65,8 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const moonEmoji = document.getElementById('moon');
     const sunEmoji = document.getElementById('sun');
     const divs = document.getElementsByClassName('dark');
-    const con_edge = document.querySelectorAll('header'); // Selecting divs with class edge-container
-    const sections = document.querySelectorAll('section'); // Selecting all sections
+    const con_edge = document.querySelectorAll('header');
+    const con_edge2 = document.querySelectorAll('footer'); 
+    const sections = document.getElementById('section1');
     const NavBar = document.querySelectorAll('nav');
     const topDiv = document.getElementById('top_div');
     const tex = document.querySelectorAll('input');
@@ -98,12 +99,15 @@ document.addEventListener('DOMContentLoaded', function() {
         divs[count].style.backgroundColor = 'darkteal';
 
         // Change background image colors of sections to darker ones
-        sections.forEach(function(section) {
-            section.classList.add('dark-gradient'); // Add the class for darker gradient
-        });
+        
+        sections.classList.add('dark-gradient'); // Add the class for darker gradient
+        
         
         // Add the class for darker version to edge containers
         con_edge.forEach(function(article) {
+            article.classList.add('Dark-edge-container');
+        });
+        con_edge2.forEach(function(article) {
             article.classList.add('Dark-edge-container');
         });
 
@@ -142,13 +146,14 @@ document.addEventListener('DOMContentLoaded', function() {
         count = 0; // Reset count
 
         // Restore original background color of sections
-        sections.forEach(function(section, index) {
-            section.classList.remove('dark-gradient');
+        sections.classList.remove('dark-gradient');
         
-        });
 
-    // Remove the class for darker version from edge containers
+   
     con_edge.forEach(function(article) {
+        article.classList.remove('Dark-edge-container');
+    });
+    con_edge2.forEach(function(article) {
         article.classList.remove('Dark-edge-container');
     });
 
