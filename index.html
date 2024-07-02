@@ -24,8 +24,8 @@
             </div>
             <p id="regular-display" class="paragraph1"
                 style=" margin-top: 35px; font-family: monospace; font-weight: bold; text-align: right;">
-                <span id="openModalBtn" style="margin-left: 2.5%; cursor:pointer"> Contact </span>
-                <a id="serv" href="#services-list" style="text-decoration: none; margin-right: 2%; margin-left: 2.5%">
+                <span id="openModalBtn" style="cursor:pointer"> Contact </span>
+                <a id="serv" href="#services-list" style="text-decoration: none;">
                     Services </a>
                 <select
                     style="background-color: transparent; color: blue; border: none; font-family: monospace;  font-weight: bold; font-size: large"
@@ -33,7 +33,7 @@
                     <option style="background-color: transparent;" value="en">English</option>
                     <option style="background-color: transparent;" value="ar">العربية</option>
                 </select>
-                <span class="emoji" id="moon">🌙</span> <span class="emoji" id="sun" >☀️</span>
+                <span> <span class="emoji" id="moon">🌙</span> <span class="emoji" id="sun" >☀️</span></span>
             </p>
 
             <div id="myModal" class="modal">
@@ -51,14 +51,14 @@
         <p class="paragraph"></p>
         <p style="margin-bottom: 20px; justify-content: flex-start; "><br>
         <div id="para5" style="background-color: rgba(141, 141, 141, 0.15); padding: 0 25px;">
-            <br>
-            <p id="whoAre">
+            <br><br><br>
+            <p id="whoAre" class="hiddin">
                 <span id="who" class="larger-letter"> Who </span>
                 <span class="larger-letter" id="are" style="color: darkviolet;"> Are </span>
                 <span id="we" class="larger-letter"> We ? </span>
             </p>
             <br>
-            <p>
+            <p class="hiddin">
                 <span id="atmu">
                     At MuVet we understand the specialbond you share with your pets,
                     and <span style="color: darkviolet"> our mission is to provide top-notch veterinary services </span>
@@ -70,7 +70,7 @@
                     veterinary care and our dedication to nurturing the
                     strong bond between you and your furry companions.
                 </span>
-                <br><br>
+                <br><br><br> 
 
             </p>
             <br>
@@ -130,34 +130,36 @@
                     src="https://i.ibb.co/tMNZSjv/photo-2024-02-01-22-21-50.jpg" alt="photo-2024-02-01-22-21-50"></a>
         </p>
     </div>
-    <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255);">
-        <br>
-        <h1 id="hours">Working Hours</h1> <br>
-        <div class="inline-element">
-            <h2 id="d1">Sunday</h2> <span id="time0"> 8:30 A.M. - 3:00 P.M. </span>
+    <section>
+        <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255);">
+            <br>
+            <h1 id="hours">Working Hours</h1> <br>
+            <div class="inline-element hiddin">
+                <h2 id="d1">Sunday</h2> <span id="time0"> 8:30 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d2">Monday</h2> <span id="time1"> 8:30 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d3">Tuesday</h2> <span id="time2"> 8:00 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d4">Wednesday</h2> <span id="time3"> 8:00 A.M. - 3:00 P.M. </span>
+            </div>
         </div>
-        <div class="inline-element">
-            <h2 id="d2">Monday</h2> <span id="time1"> 8:30 A.M. - 3:00 P.M. </span>
+        <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255); padding: 20px;">
+            <div class="inline-element hiddin">
+                <h2 id="d5">Thursday</h2> <span id="time4"> 8:00 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d6">Friday</h2> <span id="time5"> 4:00 P.M. - 10:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d7">Saterday</h2> <span id="time6"> 9:00 A.M. - 2:00 P.M. </span>
+            </div>
         </div>
-        <div class="inline-element">
-            <h2 id="d3">Tuesday</h2> <span id="time2"> 8:00 A.M. - 3:00 P.M. </span>
-        </div>
-        <div class="inline-element">
-            <h2 id="d4">Wednesday</h2> <span id="time3"> 8:00 A.M. - 3:00 P.M. </span>
-        </div>
-    </div>
-    <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255); padding: 20px;">
-        <div class="inline-element">
-            <h2 id="d5">Thursday</h2> <span id="time4"> 8:00 A.M. - 3:00 P.M. </span>
-        </div>
-        <div class="inline-element">
-            <h2 id="d6">Friday</h2> <span id="time5"> 4:00 P.M. - 10:00 P.M. </span>
-        </div>
-        <div class="inline-element">
-            <h2 id="d7">Saterday</h2> <span id="time6"> 9:00 A.M. - 2:00 P.M. </span>
-        </div>
-    </div>
-    <section class="gradient-background">
+    </section>
+    <section id="section1" class="gradient-background">
         <br>
         <dive class="dark" style="text-align: center;">
             <span class="larger-letter">
@@ -192,7 +194,7 @@
         <br> <br>
     </section>
     <main class="dark">
-        <article class="edge-container"
+        <footer class="edge-container"
             style="line-height: 35px; text-align: center; padding: 25px; border-top-left-radius: 25px; border-top-right-radius: 25px;">
             <br>
             <p class="paragraph2" style="font-family: monospace; font-weight: bold; font-size: 1.5em;">
@@ -216,9 +218,9 @@
                 </span>
             </p>
             <br>
-        </article>
+        </footer>
     </main>
-    <script src="JavaScript/home_Page_JS.js"></script>
+    <script defer src="JavaScript/home_Page_JS.js"></script>
 </body>
 
 </html>
