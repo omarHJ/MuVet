@@ -1,448 +1,223 @@
-body {
-    font-family: 'Arial black', sans-serif;
-    background-color: rgb(183, 228, 233);
-    line-height: 1.7;
-}
+<!DOCTYPE html>
+<html>
 
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: -20px;
-    z-index: 99;
-    font-size: 18px;
-    padding: 0%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    border-radius: 50%;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="Styles/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 
-/* The Modal (background) */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img style="width:50%" src="imgs/up arrow.png">
+    </button>
+    <main>
+        <header id="Top" class="edge-container" style="width: 100%;">
+            <p id="pic1" class="paragraph1">
+                <a href="index.html"><img id="logoImg" src="imgs/mu-vet-high-resolution-logo-transparent.png"></a>
+            </p>
+            <div id="hamburger-menu" onclick="toggleMenu()" style="transform: translateY(-10px)">
+                ☰
+            </div>
+            <p id="regular-display" class="paragraph1"
+                style=" margin-top: 35px; font-family: monospace; font-weight: bold; text-align: right;">
+                <span id="openModalBtn" style="cursor:pointer"> Contact </span>
+                <a id="serv" href="#services-list" onclick="toggleMenu()" style="text-decoration: none;">
+                    Services </a>
+                <select
+                    style="background-color: transparent; color: blue; border: none; font-family: monospace;  font-weight: bold; font-size: large"
+                    id="language-select">
+                    <option style="background-color: transparent;" value="en">English</option>
+                    <option style="background-color: transparent;" value="ar">العربية</option>
+                </select>
+                <span> <span class="emoji" id="moon" onclick="toggleMenu()">🌙</span> <span onclick="toggleMenu()"
+                        class="emoji" id="sun">☀️</span></span>
+            </p>
 
-/* Modal Content/Box */
-.modal-content {
-    background-color: skyblue;
-    margin: 15% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #888;
-    width: 80%;
-    /* Could be more or less, depending on screen size */
-}
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p style="color: black">Clinic Land Line 1 : 06533518 <br> Clinic Land Line 2 : 06533520 </p>
+                </div>
+            </div>
+        </header>
+    </main>
+    <script src='JavaScript/Dark-mode.js'></script>
+    <div id="atmuv" class="dark container"
+        style=" background-image: url('imgs/AdobeStock_506598485-copy.jpg'); background-repeat: no-repeat; background-size: 100% auto;">
 
-/* Close Button */
-.close {
-    color: dark gray;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        <p class="paragraph"></p>
+        <p style="margin-bottom: 20px; justify-content: flex-start; "><br>
+        <div id="para5" style="background-color: rgba(141, 141, 141, 0.15); padding: 0 25px;">
+            <br><br><br>
+            <p id="whoAre" class="hiddin">
+                <span id="who" class="larger-letter"> Who </span>
+                <span class="larger-letter" id="are" style="color: darkviolet;"> Are </span>
+                <span id="we" class="larger-letter"> We ? </span>
+            </p>
+            <br>
+            <p class="hiddin">
+                <span id="atmu">
+                    At MuVet we understand the specialbond you share with your pets,
+                    and our mission is to provide top-notch veterinary services </span>
+                    tailored to meet their unique needs.
+                </span>
+                <br><br>
+                <span id="wepride">
+                    Our team of highly skilled veterinarians pride themselves on their commitment to excellence in
+                    veterinary care and our dedication to nurturing the
+                    strong bond between you and your furry companions.
+                </span>
+                <br><br><br>
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+            </p>
+            <br>
+        </div>
+        </p>
+    </div>
+    <div style="margin: 3%; padding: 1%;text-align: center;">
+        <h1 id="services-list">Our services</h>
+    </div>
+    <div class="container" style="margin: 3%; padding: 1%;">
+        <p class="paragraph3 hiddin"> <span class="larger-letter" id="h1"> Health Check Appointments</span>
+            <br><span id="h11"> Our veterinarian will check your pet's weight, temperature, pulse, and respiration rate.
+                Vets will scan your pet for any obvious signs of illness and will likely ask you questions about your
+                pet's
+                normal behavior. </span>
+        </p>
+        <p class="paragraph3 hiddin"><span class="larger-letter" id="h2">Travel Preparations</span>
+            <br> <span id="h22"> Planning to travel with you your pet? We've got you covered, our clinic will assist
+                you in prepairing any travelling papers for your pet, ensuring a smooth and hassle-free
+                journey for you and your companion.</span>
+        </p>
+        <p class="paragraph3 hiddin"><span class="larger-letter" id="h3"> Surgery Appointments </span>
+            <br> <span id="h33"> Our skilled veterinary team is rquipped to handle a wide range of surgical procedures,
+                From routine surgeries to specialized interventions, we prioritize the health and well-being of your
+                pets.</span>
+        </p>
+        <p class="paragraph3 hiddin"
+            style="font-size:220%; font-family: monospace; margin-top: 5%; color: rgb(204, 103, 20); font-weight: bold;"
+            id="h4">
+            And More !
+        </p>
+    </div>
+    <div class="container dark" style="background-color: rgb(175, 247, 255); padding: 20px;">
+        <p class="paragraph">
+            <br> <a><img class="rounded-corner" style="height: 85%; width: 100%;"
+                    src="https://i.ibb.co/nBcT8yv/photo-2024-02-01-20-16-29.jpg"></a>
+        </p>
+        <p class="paragraph">
+            <span class="larger-letter" id="clinet"><br> Log In As Pet-Owner </br></span><br> <span id="wellcom">
+                Welcome to MuVet, where</br>
+                <br>your pet's health is our focus</span><br><br>
+            <br>
+            <button onclick="redirectToLoginPage('client-login')" id="login" > Log in </button>
+            <button onclick="redirectToLoginPage('signup-client')" id="reg"> Sign up </button>
+            </br>
+        </p>
+    </div>
+    <div class="container" style="margin: 5%; padding: 1%;">
+        <p class="paragraph"><span class="larger-letter" id="doct"><br> Log in As Clinic Staff </span> <br><br><br><br>
+            <button id="login2" onclick="redirectToLoginPage('staff-login')" >Log in </button>
+            <button id="reg2" onclick="redirectToLoginPage('staff-reg')" >Sign up</button>
+        </p>
+        <p class="paragraph"><a><img class="rounded-corner" style="height: 90%; width: 90%;"
+                    src="https://i.ibb.co/tMNZSjv/photo-2024-02-01-22-21-50.jpg" alt="photo-2024-02-01-22-21-50"></a>
+        </p>
+    </div>
+    <section>
+        <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255);">
+            <br>
+            <h1 id="hours">Working Hours</h1> <br>
+            <div class="inline-element hiddin">
+                <h2 id="d1">Sunday</h2> <span id="time0"> 8:30 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d2">Monday</h2> <span id="time1"> 8:30 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d3">Tuesday</h2> <span id="time2"> 8:00 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d4">Wednesday</h2> <span id="time3"> 8:00 A.M. - 3:00 P.M. </span>
+            </div>
+        </div>
+        <div class="dark" style="text-align: center; background-color: rgb(175, 247, 255); padding: 20px;">
+            <div class="inline-element hiddin">
+                <h2 id="d5">Thursday</h2> <span id="time4"> 8:00 A.M. - 3:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d6">Friday</h2> <span id="time5"> 4:00 P.M. - 10:00 P.M. </span>
+            </div>
+            <div class="inline-element hiddin">
+                <h2 id="d7">Saterday</h2> <span id="time6"> 9:00 A.M. - 2:00 P.M. </span>
+            </div>
+        </div>
+    </section>
+    <section id="section1" class="gradient-background">
+        <br>
+        <dive class="dark" style="text-align: center;">
+            <span class="larger-letter">
+                <h1 id="team">Meet Our Team</h1>
+            </span>
+        </dive>
+        <br>
+        <div class="card-container">
+            <div class="card hiddin" style="min-width: 200px;">
+                <div>
+                    <h2 id="ali">Ali Omar </h2>
+                    <br><span id="ali2"> A veterinarian graduated from the Jordanian University of Science and
+                        Technology with 3 years of experience in puppy,
+                        cats and surgeries. </span>
+                </div>
+            </div>
+            <div class="card hiddin" style="min-width: 200px;">
+                <div>
+                    <h2 id="ola">Ola Ahmad</h2>
+                    <br><span id="ola2"> A veterinarian who graduated from the Jordanian University of Science and
+                        Technology with two years of experience working with horses,
+                        sheep and cattle. </span>
+                </div>
+            </div>
+            <div class="card hiddin" style="min-width: 200px;">
+                <div>
+                    <h2 id="ayhm">Ayham Hamza</h2>
+                    <br><span id="ayhm2"> Ouer beloved groomer </span>
+                </div>
+            </div>
+        </div>
+        <br> <br>
+    </section>
+    <main class="dark">
+        <footer class="edge-container"
+            style="line-height: 35px; text-align: center; padding: 25px; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+            <br>
+            <p class="paragraph2" style="font-family: monospace; font-weight: bold; font-size: 1.5em;">
+                <span id="openModalBtn2" style=" cursor:pointer"> Phone number </span><br> <span id="email"> Email us
+                </span> <br> <a
+                    href="https://www.google.com/maps/place/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D9%85%D8%A4%D8%AA%D8%A9%E2%80%AD/@31.0936565,35.7325286,14z/data=!4m6!3m5!1s0x15039d60edaaebdd:0x9a417ab22771f9b3!8m2!3d31.0936562!4d35.7173742!16s%2Fm%2F043l6yx?entry=ttu"><span
+                        id="location"> Location </span></a> <br> <a href="#atmuv"><span id="abt"> About </span></a> <br>
+                <br>
+                &copy;<span id="currentYear"></span></script>
+            </p>
+            <p id="regular-display-1" class="paragraph2"
+                style="font-family: monospace; font-weight: bold; font-size: 1.2em;">
+                <a href=""><img style="width: 70%; height: 50%;" src="imgs/white logo.png"></a> <br>
+                <span id="reg2"> Follow us on social media <br>
+                    <a><img id="reg2" style="width: 10%; height: 22%; margin-right: 10px;"
+                            src="imgs/tmp_405af464-7f31-480c-b7f1-d759f8d247bb.png"></a>
+                    <a><img style="width: 10%; height: 22%; margin-right: 10px;"
+                            src="imgs/tmp_3a41c722-46cc-4f6d-a686-6de992918710.png"></a>
+                    <a><img style="width: 10%; height: 22%;"
+                            src="imgs/tmp_1531e6e0-d13e-446e-82bc-183cf71b33f8.png"></a>
+                </span>
+            </p>
+            <br>
+        </footer>
+    </main>
+    <script defer src="JavaScript/home_Page_JS.js"></script>
+</body>
 
-
-/* For WebKit browsers (Chrome, Safari) */
-/* Customize the scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-    /* width of the scrollbar */
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    /* color of the track */
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #1f8db1;
-    /* color of the handle */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-    /* color of the handle on hover */
-}
-
-.gradient-background {
-    background-image: linear-gradient(rgb(175, 247, 255), rgb(175, 247, 255), white, white, rgb(175, 247, 255));
-}
-
-.dark-gradient {
-    background-image: linear-gradient(rgba(0, 81, 84, 0.687), rgb(0, 73, 80), gray, gray, rgb(34, 80, 85));
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-main {
-    background-color: rgb(175, 247, 255);
-}
-
-.full-width-div {
-    background-color: lightblue;
-    height: 100vh;
-    /* 100% of the viewport height */
-}
-
-.rounded-corner {
-    border-radius: 15px;
-}
-
-.larger-letter {
-    font-size: 1.7em;
-    /* Adjust the font size as needed */
-}
-
-button {
-    background-color: rgb(212, 212, 212);
-    font-family: 'Arial black', sans-serif;
-    border-radius: 15px;
-    padding: 3.5%;
-    width: 100px;
-    border: solid purple;
-    /*transition: background-color 0.3s ease-in-out;*/
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: 0.2s;
-    margin-right: 5%;
-}
-
-button:hover {
-    background-color: white;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: auto;
-    overflow: hidden;
-
-}
-
-.edge-container {
-    background-color: rgb(17, 238, 255);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: auto;
-    overflow: hidden;
-    color: blue;
-}
-
-.Dark-edge-container {
-    background-color: rgb(112, 171, 174);
-    color: blue;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    height: auto;
-    overflow: hidden;
-}
-
-.paragraph {
-    width: 45%;
-    /* Adjust the width as needed */
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.paragraph1 {
-    width: 50%;
-    /* Adjust the width as needed */
-    margin-bottom: 20px;
-}
-
-.paragraph2 {
-    width: 48%;
-    /* Adjust the width as needed */
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.paragraph3 {
-    width: 45%;
-    /* Adjust the width as needed */
-    margin-bottom: 20px;
-    justify-content: flex-start;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:visited {
-    color: blue;
-}
-
-img {
-    vertical-align: middle;
-    /* or top */
-}
-
-.inline-element {
-    display: inline-block;
-    /* or use display: inline; */
-    justify-content: center;
-    gap: 25px;
-    margin: 30px;
-    /* Adjust as needed for spacing */
-    background-color: rgba(13, 162, 212, 0.8);
-    color: #21118e;
-    border-radius: 15px;
-    padding: 25px;
-    box-sizing: border-box;
-    /* Include padding and border in the total width and height */
-    border: 1px solid black;
-}
-
-.card-container {
-    display: flex;
-    /* or use display: inline; */
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    flex-flow: row wrap;
-}
-
-.card {
-    font-family: sans-serif;
-    margin: 15px;
-    /* Adjust as needed for spacing */
-    text-align: center;
-    background-color: rgba(3, 3, 143, 1);
-    color: #94dffe;
-    border-radius: 15px;
-    padding: 25px;
-    box-sizing: border-box;
-    /* Include padding and border in the total width and height */
-    width: 28%;
-    box-shadow: 0px 2px 9px #000609;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    transition: transform 0.7s ease;
-}
-
-.card:hover {
-    background-color: rgb(103, 194, 255);
-    color: rgb(0, 0, 0);
-    transform: scale(120%);
-    transition-property: color, background-color, transform;
-    transition-duration: 1s;
-
-}
-
-.card-1 {
-    margin-top: 35px;
-    background-color: rgb(17, 238, 255);
-    padding: 40px;
-    border-radius: 15px;
-}
-
-/* Dark mode styles */
-.dark-mode {
-    background-color: rgb(18, 47, 63);
-    /* Dark background color */
-    color: #ffffffbb;
-    /* Light text color */
-}
-
-.emoji {
-    cursor: pointer;
-    font-size: 20px;
-    /* Adjust the font size as needed */
-}
-
-@media (min-width:700px) {
-    #para5 {
-        width: 35%;
-    }
-
-    #whoAre {
-        text-align: left;
-        margin-right: 8px;
-    }
-    #openModalBtn {
-        margin-left: 2.5%;
-    }
-    #serve {
-        margin-right: 2%; margin-left: 2.5%
-    }
-}
-
-/* Default styles for the menu and hamburger icon */
-#hamburger-menu {
-    display: none; /* Hide the hamburger menu button by default */
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    font-size: 30px;
-}
-
-#regular-display {
-    /* Your existing styles */
-    margin-top: 35px;
-    font-family: monospace;
-    font-weight: bold;
-    text-align: right;
-}
-
-/* Style for screen sizes of max-width: 700px */
-@media screen and (max-width: 700px) {
-    #hamburger-menu {
-        display: block;
-    }
-
-    #regular-display {
-        display:  flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        place-content: center;
-        position: fixed;
-        right: -10;
-        top: -35px;
-        height: 100%;
-        background-color: lightblue; /* Background color of the menu */
-        z-index: 999;
-        overflow: auto;
-        transition: transform 0.3s; /* Animation for sliding in/out */
-        transform: translateX(100%); /* Start off-screen to the right */
-        font-size: 190% !important;
-    }
-    select {
-        font-size: 100% !important;
-    }
-}
-
-/* Media query for smaller screens */
-@media (max-width: 700px) {
-
-    #whoAre {
-        text-align: right;
-        margin-right: 10px;
-    }
-
-    #para5 {
-        width: 100%;
-        margin-top: 17%;
-    }
-
-    .paragraph {
-        width: 100%;
-        /* On smaller screens, make paragraphs stack on top of each other */
-
-    }
-
-    .paragraph3 {
-        width: 100%;
-    }
-
-    .paragraph2 {
-        width: 100%;
-        /* On smaller screens, make paragraphs stack on top of each other */
-        font-size: 0.5em;
-        text-align: center;
-        min-width: 200px;
-    }
-
-    body {
-        font-size: 13px;
-    }
-
-    .inline-element {
-        padding: 5%;
-        margin: 4%;
-    }
-
-    #Top {
-        .paragraph1 {
-            width: 100%;
-            text-align: center;
-        }
-    }
-
-    #pic1 {
-        transform: translateX(-25px);
-    }
-
-    #regular-display {
-        font-size: 14px;
-        margin-right: 6%;
-    }
-
-    #openModalBtn {
-        margin: 0 0 50px 0;
-    }
-    #serv {
-        margin: 0 0 0 0;
-    }
-    select {
-        margin: 50px 0 50px 0;
-        transform: translateX(5%);
-    }
-}
-
-@media (min-width: 1050px) {
-    #regular-display-1 {
-        margin-right: -195px;
-
-        #reg2 {
-            margin-left: 130px;
-        }
-    }
-
-    #regular-display {
-        font-size: 120%;
-    }
-}
-.hiddin {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1.5s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
+</html>
