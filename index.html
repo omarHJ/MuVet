@@ -16,8 +16,7 @@
     <main>
         <header id="Top" class="edge-container" style="width: 100%;">
             <p id="pic1" class="paragraph1">
-                <a><img style="height: 85%; width: 35%; transform: translateX(30px) translateY(7px); "
-                        src="imgs/mu-vet-high-resolution-logo-transparent.png"></a>
+                <a href="index.html"><img id="logoImg" src="imgs/mu-vet-high-resolution-logo-transparent.png"></a>
             </p>
             <div id="hamburger-menu" onclick="toggleMenu()" style="transform: translateY(-10px)">
                 ☰
@@ -33,7 +32,8 @@
                     <option style="background-color: transparent;" value="en">English</option>
                     <option style="background-color: transparent;" value="ar">العربية</option>
                 </select>
-                <span> <span class="emoji" id="moon" onclick="toggleMenu()">🌙</span> <span onclick="toggleMenu()" class="emoji" id="sun" >☀️</span></span>
+                <span> <span class="emoji" id="moon" onclick="toggleMenu()">🌙</span> <span onclick="toggleMenu()"
+                        class="emoji" id="sun">☀️</span></span>
             </p>
 
             <div id="myModal" class="modal">
@@ -61,7 +61,7 @@
             <p class="hiddin">
                 <span id="atmu">
                     At MuVet we understand the specialbond you share with your pets,
-                    and <span style="color: darkviolet"> our mission is to provide top-notch veterinary services </span>
+                    and our mission is to provide top-notch veterinary services </span>
                     tailored to meet their unique needs.
                 </span>
                 <br><br>
@@ -70,7 +70,7 @@
                     veterinary care and our dedication to nurturing the
                     strong bond between you and your furry companions.
                 </span>
-                <br><br><br> 
+                <br><br><br>
 
             </p>
             <br>
@@ -81,26 +81,27 @@
         <h1 id="services-list">Our services</h>
     </div>
     <div class="container" style="margin: 3%; padding: 1%;">
-        <p class="paragraph3"> <span class="larger-letter" id="h1"> Health Check Appointments</span>
+        <p class="paragraph3 hiddin"> <span class="larger-letter" id="h1"> Health Check Appointments</span>
             <br><span id="h11"> Our veterinarian will check your pet's weight, temperature, pulse, and respiration rate.
                 Vets will scan your pet for any obvious signs of illness and will likely ask you questions about your
                 pet's
                 normal behavior. </span>
         </p>
-        <p class="paragraph3"><span class="larger-letter" id="h2">Travel Preparations</span>
+        <p class="paragraph3 hiddin"><span class="larger-letter" id="h2">Travel Preparations</span>
             <br> <span id="h22"> Planning to travel with you your pet? We've got you covered, our clinic will assist
                 you in prepairing any travelling papers for your pet, ensuring a smooth and hassle-free
                 journey for you and your companion.</span>
         </p>
-        <p class="paragraph3"><span class="larger-letter" id="h3"> Surgery Appointments </span>
+        <p class="paragraph3 hiddin"><span class="larger-letter" id="h3"> Surgery Appointments </span>
             <br> <span id="h33"> Our skilled veterinary team is rquipped to handle a wide range of surgical procedures,
                 From routine surgeries to specialized interventions, we prioritize the health and well-being of your
                 pets.</span>
         </p>
-        <p class="paragraph"
+        <p class="paragraph3 hiddin"
             style="font-size:220%; font-family: monospace; margin-top: 5%; color: rgb(204, 103, 20); font-weight: bold;"
             id="h4">
             And More !
+        </p>
     </div>
     <div class="container dark" style="background-color: rgb(175, 247, 255); padding: 20px;">
         <p class="paragraph">
@@ -111,20 +112,16 @@
             <span class="larger-letter" id="clinet"><br> Log In As Pet-Owner </br></span><br> <span id="wellcom">
                 Welcome to MuVet, where</br>
                 <br>your pet's health is our focus</span><br><br>
-            <br> <button onclick="redirectToLoginPage('client-login')">
-                <div class="slide-effect">
-                    <div class="AA" id="login"> Log in </div>
-                </div>
-            </button> <button onclick="redirectToLoginPage('signup-client')">
-                <div id="reg"> Sign up </div>
-            </button>
+            <br>
+            <button onclick="redirectToLoginPage('client-login')" id="login" > Log in </button>
+            <button onclick="redirectToLoginPage('signup-client')" id="reg"> Sign up </button>
             </br>
         </p>
     </div>
     <div class="container" style="margin: 5%; padding: 1%;">
         <p class="paragraph"><span class="larger-letter" id="doct"><br> Log in As Clinic Staff </span> <br><br><br><br>
-            <button id="login2" onclick="redirectToLoginPage('staff-login')">Log in </button>
-            <button id="reg2" onclick="redirectToLoginPage('staff-reg')">Sign up</button>
+            <button id="login2" onclick="redirectToLoginPage('staff-login')" >Log in </button>
+            <button id="reg2" onclick="redirectToLoginPage('staff-reg')" >Sign up</button>
         </p>
         <p class="paragraph"><a><img class="rounded-corner" style="height: 90%; width: 90%;"
                     src="https://i.ibb.co/tMNZSjv/photo-2024-02-01-22-21-50.jpg" alt="photo-2024-02-01-22-21-50"></a>
@@ -168,7 +165,7 @@
         </dive>
         <br>
         <div class="card-container">
-            <div class="card" style="min-width: 200px;">
+            <div class="card hiddin" style="min-width: 200px;">
                 <div>
                     <h2 id="ali">Ali Omar </h2>
                     <br><span id="ali2"> A veterinarian graduated from the Jordanian University of Science and
@@ -176,7 +173,7 @@
                         cats and surgeries. </span>
                 </div>
             </div>
-            <div class="card" style="min-width: 200px;">
+            <div class="card hiddin" style="min-width: 200px;">
                 <div>
                     <h2 id="ola">Ola Ahmad</h2>
                     <br><span id="ola2"> A veterinarian who graduated from the Jordanian University of Science and
@@ -184,7 +181,7 @@
                         sheep and cattle. </span>
                 </div>
             </div>
-            <div class="card" style="min-width: 200px;">
+            <div class="card hiddin" style="min-width: 200px;">
                 <div>
                     <h2 id="ayhm">Ayham Hamza</h2>
                     <br><span id="ayhm2"> Ouer beloved groomer </span>
