@@ -10,6 +10,7 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
+    z-index: 2000;
     background-color: #1f8db1;
     display: flex;
     justify-content: center;
