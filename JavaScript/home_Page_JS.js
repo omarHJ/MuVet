@@ -2,7 +2,9 @@ const languageFiles = {
     en: 'en.json',
     ar: 'ar.json'
 };
-
+$(window).on("load", function () {
+    $(".load-wrapper").fadeOut("slow")
+});
 // Function to fetch and load language translations
 function loadTranslations(language) {
     // Replace with your fetch logic to load translations from JSON files
