@@ -97,6 +97,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     if (clickParam === 'moon') {
         const moonElement = document.getElementById('moon');
         moonElement.click();
+        toggleMenu();
     }
 });
 
