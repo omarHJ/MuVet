@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     moonEmoji.addEventListener('click', function() {
         document.body.classList.add('dark-mode');
         var divs = document.getElementsByClassName('dark');
-        for (var i = 0; i < divs.length; i+=2){
-        divs[i].style.backgroundColor = newColor;}
     });
 
     sunEmoji.addEventListener('click', function() {
