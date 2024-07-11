@@ -53,13 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function changeDivColor(divClassName, newColor) {
-    var divs = document.getElementsByClassName(divClassName);
-    for (var i = 0; i < divs.length; i++) {
-        divs[i].style.backgroundColor = newColor;
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get references to the moon and sun emoji elements
     const moonEmoji = document.getElementById('moon');
