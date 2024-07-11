@@ -115,7 +115,7 @@ input {
 
 @media (max-width: 700px) {
     form {
-        width: 200%;
+        width: 180%;
     }
 
     .container {
