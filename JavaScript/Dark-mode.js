@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const con_edge2 = document.querySelectorAll('footer'); 
     const sections = document.getElementById('section1');
     const NavBar = document.querySelectorAll('nav');
-    const topDiv = document.getElementById('top_div');
     const tex = document.querySelectorAll('input');
     const tex2 = document.querySelectorAll('textarea');
     const h_3 = document.querySelectorAll('h3');
@@ -115,8 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.add('dark-mode-NavB');
         })
 
-        topDiv.classList.add('dark-mode-NavB');
-
         tex.forEach(function(input) {
             input.classList.add('dark-text-box');
         })
@@ -160,8 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
     NavBar.forEach(function(nav) {
         nav.classList.remove('dark-mode-NavB');
     })
-
-    topDiv.classList.remove('dark-mode-NavB'); // Remove the 'dark-mode-NavB' class from the selected element
 
     tex.forEach(function(input) {
         input.classList.remove('dark-text-box');
